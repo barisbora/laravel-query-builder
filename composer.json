@@ -1,0 +1,49 @@
+{
+    "name": "barisbora/laravel-query-builder",
+    "description": "Easily build Eloquent queries from API requests",
+    "keywords": [
+        "barisbora",
+        "laravel-query-builder"
+    ],
+    "homepage": "https://github.com/barisbora/laravel-query-builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Barış Bora",
+            "email": "baris.bora@itu.edu.tr",
+            "homepage": "https://github.com/barisbora",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1|^7.0",
+        "orchestra/testbench": "~3.5.0|~3.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BarisBora\\QueryBuilder\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BarisBora\\QueryBuilder\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BarisBora\\QueryBuilder\\QueryBuilderServiceProvider"
+            ]
+        }
+    }
+}
