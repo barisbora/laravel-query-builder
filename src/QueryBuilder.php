@@ -1,6 +1,6 @@
 <?php
 
-namespace Barisbora\QueryBuilder;
+namespace BarisBora\QueryBuilder;
 
 trait QueryBuilder
 {

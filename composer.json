@@ -3,6 +3,7 @@
     "description": "Easily build Eloquent queries from API requests",
     "keywords": [
         "barisbora",
+        "buraktekin",
         "laravel-query-builder"
     ],
     "homepage": "https://github.com/barisbora/laravel-query-builder",
