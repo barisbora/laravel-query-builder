@@ -93,6 +93,7 @@ class QueryBuilderHandler extends Builder
 
     public function sorts( array $sorts )
     {
+
         $getSorts = collect( explode( ',', $this->request->get( 'sort' ) ) );
 
         foreach ( $getSorts as $sort ) {
