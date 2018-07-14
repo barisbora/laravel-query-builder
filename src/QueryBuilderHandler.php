@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Barisbora\QueryBuilder;
 
 use Illuminate\Database\Eloquent\Builder;
 
@@ -69,6 +69,23 @@ class QueryBuilderHandler extends Builder
         $intersections = $getIncludes->intersect( collect( $includes )->unique()->values() );
 
         $this->with( $intersections->toArray() );
+
+        return $this;
+
+    }
+
+    /**
+     * @param array $includes
+     * @return $this
+     */
+    public function loads( array $includes )
+    {
+
+        $getIncludes = collect( explode( ',', $this->request->get( 'include' ) ) );
+
+        $intersections = $getIncludes->intersect( collect( $includes )->unique()->values() );
+
+        $this->load( $intersections->toArray() );
 
         return $this;
 
